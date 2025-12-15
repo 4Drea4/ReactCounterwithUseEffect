@@ -6,23 +6,27 @@ export default function Counter() {
   const handleClick = () => {
     setCount((prevCount) =>  prevCount + 1);
   };
+  const handleDecrementClick =() => {
+    setCount((prevCount) => prevCount - 1);
+  }
 
   return (
     <div>
       <p>You clicked {count} times</p>
       <button onClick={handleClick}>
-        Click me
+        Increment
       </button>
+      <button onClick={handleDecrementClick}>Decrement</button>
     </div>
   );
 }
 
 
 //dependencies
-useEffect(() => {
-    console.log("Count Changed", Counter);
+// useEffect(() => {
+//     console.log("Count Changed", Counter);
 
-return()=> {
-    console.log("Stop running");
-};
-}, [Counter]);
+// return()=> {
+//     console.log("Stop running");
+// };
+// }, [Counter]);
