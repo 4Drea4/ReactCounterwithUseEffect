@@ -3,7 +3,7 @@ import React, { useState , useEffect } from 'react';
 export default function Counter() {
   const [count, setCount] = useState(0);
   const [history, setHistory] = useState<number[]>([0]);
-  const [inputText, setInputText] = useState(0);
+  const [inputText, setInputText] = useState(1);
 
   //from Ervin
   useEffect(() => {
@@ -12,9 +12,11 @@ export default function Counter() {
 
   const handleClick = () => {
     setCount((prevCount) =>  prevCount + inputText);
+    setHistory([...history,count] );
   };
   const handleDecrementClick =() => {
     setCount((prevCount) => prevCount - inputText);
+
   }
 
 
@@ -33,7 +35,8 @@ export default function Counter() {
       onChange={(e) => setInputText(Number(e.target.value))}
    
         />
-          <p>Click History: {history}</p>
+          {/* <p>Click History: {history}</p> */}
+          
       
           </div>
     </div>
