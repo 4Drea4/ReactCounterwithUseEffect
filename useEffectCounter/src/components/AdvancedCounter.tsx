@@ -25,7 +25,8 @@ export default function Counter() {
         Increment
       </button>
       <button onClick={handleDecrementClick}>Decrement</button>
-      <p>Account History: {history}</p>
+      <button onClick = {()=> setCount(0)}>Reset</button>
+      <p>Click History: {history}</p>
     </div>
   );
 }
