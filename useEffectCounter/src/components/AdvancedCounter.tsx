@@ -5,10 +5,16 @@ export default function Counter() {
   const [history, setHistory] = useState<number[]>([0]);
   const [inputText, setInputText] = useState(1);
 
-  //Assistance from Ervin
+  //Assistance from Patrice
   useEffect(() => {
-    setHistory((prev) => [...prev, count]
-  )}, [count]);
+    localStorage.setItem("countKey" , JSON.stringify(count))
+    console.log('ravioli');
+  }, [count]);
+  
+  const reset = () =>{
+    setCount(0)
+    setHistory([])
+  }
 
   const handleClick = () => {
     setCount((prevCount) => {
@@ -30,12 +36,13 @@ export default function Counter() {
 
   return (
     <div>
-      <p>You clicked {count} times</p>
+      <p>Current Count: {count} </p>
       <button onClick={handleClick}>Increment </button>
       <button onClick={handleDecrementClick}>Decrement</button>
-      <button onClick = {()=> setCount(0)}>Reset</button>
+      <button onClick = {reset}>Reset</button> 
 
       <div className='Input-value'>
+      <label>Step Value: </label>
       <input 
       value={inputText}
       onChange={(e) => setInputText(Number(e.target.value))}
@@ -53,17 +60,3 @@ export default function Counter() {
   );
 }
 
-//useeffect
-
-
-
-// useEffect(() => {
-//      console.log("Count Changed", Counter);
-  
-//   return()=> {
-//        console.log("Stop running");
-//   };
-//    }, [Counter]);
-
-//dependencies
-//
