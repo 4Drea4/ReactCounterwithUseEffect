@@ -4,9 +4,10 @@ export default function Counter() {
   const [count, setCount] = useState(0);
   const [history, setHistory] = useState<number[]>([0]);
 
+  //from Ervin
   useEffect(() => {
-    setHistory(count);
-  }, [count]);
+    setHistory((prev) => [...prev, count]
+  )}, [count]);
 
   const handleClick = () => {
     setCount((prevCount) =>  prevCount + 1);
@@ -24,6 +25,7 @@ export default function Counter() {
         Increment
       </button>
       <button onClick={handleDecrementClick}>Decrement</button>
+      <p>Account History: {history}</p>
     </div>
   );
 }
