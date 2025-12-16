@@ -53,14 +53,15 @@ export default function Counter() {
       <p className='currentcount'>Current Count: {count} </p>
 
       <div className='buttoncontainer'>
-      <button onClick={handleClick}>Increment </button>
-      <button onClick={handleDecrementClick}>Decrement</button>
-      <button onClick = {reset}>Reset</button> 
+      <button className='button' onClick={handleClick}>Increment </button>
+      <button  className="button" onClick={handleDecrementClick}>Decrement</button>
+      <button className="button" onClick = {reset}>Reset</button> 
       </div>
-      
+
       <div className='Input-value'>
       <label>Step Value: </label>
       <input 
+      className="input"
       value={inputText}
       onChange={(e) => setInputText(Number(e.target.value))}
    

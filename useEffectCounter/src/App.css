@@ -1,20 +1,41 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .countercontainer{
-  background-color: ;
-
+  background-color:#A09EBB ;
+  border-radius: 15px ;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.title{
-
-}
-
-.currentcount{
-
-}
 
 .buttoncontainer{
-
+display: flex;
+flex-direction: row;
+gap: 5px;
 }
 
-.Input-value{
-
+.input{
+background-color: #B5D2CB ;
+color: #000000;
 }
+
+
+.button{
+  display: flex;
+  flex-direction: row;
+  color:#B5D2CB;
+  background-color:#000000 ;
+}
+
+/* A6FFA1 light green
+#BFFFBC tea green
+#B5D2CB ash grey
+#B5D2CB pale slate
+#A09EBB- lavender grey */
