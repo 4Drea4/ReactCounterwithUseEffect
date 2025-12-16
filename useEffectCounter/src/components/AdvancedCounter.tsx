@@ -48,12 +48,16 @@ export default function Counter() {
 
 
   return (
-    <div>
-      <p>Current Count: {count} </p>
+    <div className='countercontainer'>
+      <h1 className='title'> Counter</h1>
+      <p className='currentcount'>Current Count: {count} </p>
+
+      <div className='buttoncontainer'>
       <button onClick={handleClick}>Increment </button>
       <button onClick={handleDecrementClick}>Decrement</button>
       <button onClick = {reset}>Reset</button> 
-
+      </div>
+      
       <div className='Input-value'>
       <label>Step Value: </label>
       <input 
