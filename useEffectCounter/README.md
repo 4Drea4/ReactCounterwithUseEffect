@@ -2,10 +2,7 @@
 *Andrea E. ; Mon Dec 15<sup>th</sup>*
 
 
-
-
-
-I did receive assitance from Ervin when it came to creating my first UseE
+I did receive assitance from Ervin when it came to creating my first UseEffect. And Patrice helped me understand so much!
 
 
 ### Resources:
